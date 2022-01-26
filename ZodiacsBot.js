@@ -1,3 +1,14 @@
+var timeToStartRace = 5;
+
+function goToBattlefield(){
+  console.clear(); 
+  var aTags = document.getElementsByTagName("a");
+  for(var a = 0;a< aTags.length;a++){
+    if(aTags[a].hash.includes('battlefield')) aTags[a].click();
+  }
+  setTimeout(function(){ZodiacsRace();}, timeToStartRace * 1000);
+}
+
 function ZodiacsRace(){
   var cars = document.getElementsByClassName('content shadowed item d-flex flex-row justify-content-around cursor');
   var intialBalance = JSON.parse(JSON.stringify(document.getElementsByClassName('text-orange')[0].innerHTML));
@@ -12,12 +23,12 @@ function ZodiacsRace(){
 
   function ableToRace(){
     console.time('Check if the cars it`s able to race');
-    var aTags = document.getElementsByTagName("div");
+    var divTags = document.getElementsByTagName("div");
     var searchText = "Racing: 10/10";
     var found = true;
 
     for (var j = 0; j < aTags.length; j++) {
-      if (aTags[j].textContent.includes(searchText)) {
+      if (divTags[j].textContent.includes(searchText)) {
         found = false;
         break;
       }
@@ -74,3 +85,5 @@ function ZodiacsRace(){
   console.time('Racing');
   startRaceFunction = setInterval(startRace, racingTime * 1000);
 }
+
+goToBattlefield();
