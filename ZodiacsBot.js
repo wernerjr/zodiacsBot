@@ -27,7 +27,7 @@ function ZodiacsRace(){
     var searchText = "Racing: 10/10";
     var found = true;
 
-    for (var j = 0; j < aTags.length; j++) {
+    for (var j = 0; j < divTags.length; j++) {
       if (divTags[j].textContent.includes(searchText)) {
         found = false;
         break;
