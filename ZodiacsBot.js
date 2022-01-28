@@ -15,9 +15,9 @@ function ZodiacsRace(){
   var startRaceFunction;
   var checkResultFunction;
   var claimFunction;
-  const claimingTime = 6;
-  const checkingTime = 38;
-  const racingTime = 52;
+  const claimingTime = 8;
+  const checkingTime = 35;
+  const racingTime = 48;
   var racing = true;
   const coin = 'ZDCV2'
 
