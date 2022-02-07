@@ -16,8 +16,8 @@ function ZodiacsRace(){
   var checkResultFunction;
   var claimFunction;
   const claimingTime = 10;
-  const checkingTime = 40;
-  const racingTime = 75;
+  const checkingTime = 35;
+  const racingTime = 50;
   var racing = true;
   const coin = 'ZDCV2'
 
@@ -40,7 +40,7 @@ function ZodiacsRace(){
 
   function claim(){
     console.time('Claiming');
-    var claimButton = document.getElementsByClassName('ant-btn-success')[0];
+    var claimButton = document.getElementsByClassName('modal-close-btn')[0];
     claimButton.click();
     clearInterval(claimFunction);
     console.timeEnd('Claiming');
